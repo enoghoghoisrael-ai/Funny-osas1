@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official website of Funny Osas1 (Enoghogho Israel Aisosa). Nigerian content creator, comedian, and UNIPORT alumnus based in Lekki, Lagos.">
+    <meta name="keywords" content="Enoghogho Israel Aisosa, Funny Osas1, Funny Osas1 real name, Funny Osas1 biography, UNIPORT, Lekki, Lagos, Nigerian comedian">
+    <title>Funny Osas1 | Official Website</title>
+    <style>
+        /* Global Styles & Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Variables */
+        :root {
+            --primary-color: #ffcc00; /* Energetic Comedic Yellow */
+            --dark-color: #111;
+            --light-color: #fff;
+            --gray-color: #f4f4f4;
+        }
+
+        /* Navigation */
+        header {
+            background: var(--dark-color);
+            padding: 20px 10%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--primary-color);
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        nav a {
+            color: var(--light-color);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .cta-btn {
+            background: var(--primary-color);
+            color: var(--dark-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s, background 0.3s;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+            background: #e6b800;
+        }
+
+        /* Hero Section */
+        #home {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://unsplash.com') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--light-color);
+            padding: 0 20px;
+            margin-top: 60px;
+        }
+
+        #home h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        #home p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+
+        .hero-btns a {
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .secondary-btn {
+            background: transparent;
+            color: var(--light-color);
+            border: 2px solid var(--light-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .secondary-btn:hover {
+            background: var(--light-color);
+            color: var(--dark-color);
+        }
+
+        /* Sections General Layout */
+        section {
+            padding: 80px 10%;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        section h2::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background: var(--primary-color);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* About Section */
+        #about {
+            background: var(--light-color);
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .about-img {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .about-img img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Videos Section */
+        #videos {
+            background: var(--gray-color);
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .video-card {
+            background: var(--light-color);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .video-placeholder {
+            width: 100%;
+            height: 200px;
+            background: #ddd;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        /* Bookings Section */
+        #bookings {
+            background: var(--light-color);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        form button {
+            background: var(--dark-color);
+            color: var(--light-color);
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        form button:hover {
+            background: var(--primary-color);
+            color: var(--dark-color);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-color);
+            color: var(--light-color);
+            text-align: center;
+            padding: 40px 10%;
+        }
+
+        .social-links {
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        .social-links a:hover {
+            color: var(--light-color);
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav a {
+                margin: 0 10px;
+            }
+            #home h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation Bar -->
+    <header>
+        <a href="#home" class="logo">Funny Osas1</a>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#videos">Videos</a>
+            <a href="#bookings" class="cta-btn">Book Now</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <h1>Capturing Smiles, One Street Interview at a Time</h1>
+        <p>Meet Enoghogho Israel Aisosa (aka Funny Osas1)—Nigeria’s premier digital content creator delivering viral street comedy watched across all nations.</p>
+        <div class="hero-btns">
+            <a href="#videos" class="cta-btn">Watch Latest Videos</a>
+            <a href="#bookings" class="secondary-btn">Brand Partnerships</a>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="about-text">
+            <h2>The Mind Behind the Brand</h2>
+            <p>Hailing from Benin City, Edo State, <strong>Enoghogho Israel Aisosa</strong> is the creative force behind the globally recognized entertainment brand <strong>Funny Osas1</strong>.</p>
+            <p>A proud alumnus of the <strong>University of Port Harcourt (UNIPORT)</strong>, Israel successfully blends psychological intrigue with everyday Nigerian street humor.</p>
+            <p>Currently operating from <strong>Lekki, Lagos</strong>, his viral public setups and interactive content have established him as a household name with a digital footprint valued at over $50,000 USD.</p>
+        </div>
+        <div class="about-img">
+            <!-- Replace src placeholder with actual path to your photo -->
+            <img src="https://unsplash.com" alt="Enoghogho Israel Aisosa - Funny Osas1">
+        </div>
+    </section>
+
+    <!-- Media Gallery Section -->
+    <section id="videos">
+        <h2>Trending Nationwide</h2>
+        <div class="video-grid">
+            <div class="video-card">
+                <div class="video-placeholder">Latest Street Prank</div>
+                <h3>Street Test Vol. 12</h3>
+            </div>
+            <div class="video-card">
+                <div class="video-placeholder">Viral Interview</div>
+                <h3>Lagos Truth Session</h3>
+            </div>
+            <div class="video-card">
+                <div class="video-placeholder">Fan Interaction</div>
